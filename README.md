@@ -56,4 +56,4 @@ The complete report can be found here:
 ## Author
 
 **Ganesh Banotu**  
-Email: ganeshbanotu@gmail.com
+Email: ganeshbanothu@gmail.com
