@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Mask Detector</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f1f3f6;
+            text-align: center;
+            margin: 0;
+            padding: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 40px;
+            width: 400px;
+            margin: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        input[type="file"] {
+            margin-top: 20px;
+        }
+        input[type="submit"] {
+            background-color: #1976d2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            margin-top: 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #1565c0;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            max-width: 100%;
+        }
+        .result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Face Mask Detection</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="image" required><br>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if result %}
+            <div class="result">Prediction: {{ result }}</div>
+            <img src="{{ image_path }}" alt="Uploaded Image">
+        {% endif %}
+    </div>
+</body>
+</html>

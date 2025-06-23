@@ -1,0 +1,36 @@
+<!-- webcam.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Face Mask Detection</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #eee;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        h1 {
+            margin-top: 30px;
+        }
+        img {
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            color: #90caf9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live Face Mask Detection</h1>
+    <img src="{{ url_for('video_feed') }}" width="720" height="560">
+    <br>
+    <a href="/">← Go Back</a>
+</body>
+</html>
